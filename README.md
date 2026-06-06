@@ -82,7 +82,7 @@ RFQ Creation → Vendor Quotation → Comparison → Approval → Purchase Order
 
 ---
 
-## ⚡ MVP Features (Hackathon Focus)
+## ⚡ MVP Features 
 
 - Vendor Management  
 - RFQ Creation  
