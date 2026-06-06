@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | VendorBridge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+        <h2>VendorBridge</h2>
+
+        <ul>
+            <li><a href="vendors.html">Vendors</a></li>
+            <li><a href="rfq.html">RFQs</a></li>
+            <li><a href="quotations.html">Quotations</a></li>
+            <li><a href="approval.html">Approvals</a></li>
+            <li><a href="invoice.html">Invoices</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+
+    <section class="dashboard-header">
+
+        <h1>Procurement Dashboard</h1>
+
+        <p>
+            Monitor procurement activities and workflows.
+        </p>
+
+    </section>
+
+    <!-- Analytics Cards -->
+
+    <section class="dashboard-cards">
+
+        <div class="stat-card">
+            <h2>120</h2>
+            <p>Total Vendors</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>45</h2>
+            <p>Active RFQs</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>18</h2>
+            <p>Pending Approvals</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>210</h2>
+            <p>Invoices Generated</p>
+        </div>
+
+    </section>
+
+    <!-- Quick Actions -->
+
+    <section class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="action-buttons">
+
+            <a href="rfq.html">
+                <button>Create RFQ</button>
+            </a>
+
+            <a href="vendor.html">
+                <button>Add Vendor</button>
+            </a>    
+
+            <a href="quotations.html">
+                <button>Compare Quotes</button>
+            </a>
+
+            <a href="invoice.html">
+                <button>Generate Invoice</button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Recent RFQs -->
+
+    <section class="recent-section">
+
+        <h2>Recent RFQs</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>RFQ ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>RFQ001</td>
+                    <td>Laptop Procurement</td>
+                    <td>Open</td>
+                </tr>
+
+                <tr>
+                    <td>RFQ002</td>
+                    <td>Office Furniture</td>
+                    <td>Pending</td>
+                </tr>
+
+                <tr>
+                    <td>RFQ003</td>
+                    <td>Printer Supplies</td>
+                    <td>Approved</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- Recent Purchase Orders -->
+
+    <section class="recent-section">
+
+        <h2>Recent Purchase Orders</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>PO Number</th>
+                    <th>Vendor</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody> 
+
+                <tr>
+                    <td>PO-2026-001</td>
+                    <td>ABC Suppliers</td>
+                    <td>Approved</td>
+                </tr>
+
+                <tr>
+                    <td>PO-2026-002</td>
+                    <td>Tech Industries</td>
+                    <td>Pending</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- Notifications -->
+
+    <section class="notifications">
+
+        <h2>Notifications</h2>
+
+        <ul>
+            <li>RFQ001 received a new quotation.</li>
+            <li>PO-2026-001 has been approved.</li>
+            <li>Invoice INV-2026-001 generated successfully.</li>
+            <li>Manager approval pending for RFQ002.</li>
+        </ul>
+
+    </section>
+
+</body>
+</html>

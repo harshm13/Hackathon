@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFQ Management | VendorBridge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>VendorBridge</h2>
+
+        <ul>
+            <li><a href="vendors.html">Vendors</a></li>
+            <li><a href="quotations.html">Quotations</a></li>
+            <li><a href="approval.html">Approvals</a></li>
+            <li><a href="purchase-order.html">Purchase Orders</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+
+        <h1>Create RFQ</h1>
+
+        <p>
+            Create and manage procurement requests efficiently.
+        </p>
+
+    </section>
+
+    <!-- RFQ Form -->
+    <section class="rfq-form-section">
+
+        <h2>New RFQ</h2>
+
+        <form class="rfq-form">
+
+            <input
+                type="text"
+                placeholder="RFQ Title"
+                required>
+
+            <textarea
+                rows="4"
+                placeholder="Product / Service Description"
+                required></textarea>
+
+            <input
+                type="number"
+                placeholder="Quantity"
+                required>
+
+            <input
+                type="date"
+                required>
+
+            <select required>
+                <option>Select Vendor</option>
+                <option>ABC Suppliers</option>
+                <option>Tech Industries</option>
+                <option>Office Essentials</option>
+            </select>
+
+            <input
+                type="file">
+
+            <button type="submit">
+                Create RFQ
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- RFQ Statistics -->
+
+    <section class="rfq-stats">
+
+        <div class="stat-card">
+            <h3>45</h3>
+            <p>Active RFQs</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>18</h3>
+            <p>Pending Responses</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>12</h3>
+            <p>Closing This Week</p>
+        </div>
+
+    </section>
+
+    <!-- RFQ Table -->
+
+    <section class="rfq-table-section">
+
+        <h2>Active RFQs</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>RFQ ID</th>
+                    <th>Title</th>
+                    <th>Vendor</th>
+                    <th>Quantity</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>RFQ001</td>
+                    <td>Laptop Procurement</td>
+                    <td>ABC Suppliers</td>
+                    <td>50</td>
+                    <td>20-06-2026</td>
+                    <td>Open</td>
+                </tr>
+
+                <tr>
+                    <td>RFQ002</td>
+                    <td>Office Chairs</td>
+                    <td>Tech Industries</td>
+                    <td>100</td>
+                    <td>25-06-2026</td>
+                    <td>Open</td>
+                </tr>
+
+                <tr>
+                    <td>RFQ003</td>
+                    <td>Printer Supplies</td>
+                    <td>Office Essentials</td>
+                    <td>30</td>
+                    <td>18-06-2026</td>
+                    <td>Closing Soon</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendorBridge Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+
+            <div class="login-header">
+                <h1>VendorBridge</h1>
+                <p>Procurement & Vendor Management ERP</p>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Select Role</label>
+                    <select id="role" required>
+                        <option value="">Choose Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager / Approver</option>
+                        <option value="procurement">Procurement Officer</option>
+                        <option value="vendor">Vendor</option>
+                    </select>
+                </div>
+
+                <div class="options">
+                    <label>
+                         Remember Me <input type="checkbox" id="rememberMe">
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button type="button" class="signup-btn" onclick="window.location.href='newaccount.html'">
+                Create New Account
+            </button>
+
+            <div class="footer-links">
+                <a href="index.html">← Back to Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', async function(e) {
+            // 1. Prevent the form from refreshing the page
+            e.preventDefault();
+
+            // 2. Grab the values from the inputs
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const role = document.getElementById('role').value;
+
+            console.log("Attempting login for:", email, role);
+
+            // 3. (Optional) Here is where you will eventually put your fetch() 
+            // request to your Node.js backend to verify the user.
+            /*
+            const response = await fetch('http://localhost:5000/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password, role })
+            });
+            if (!response.ok) return alert('Invalid credentials');
+            */
+
+            // 4. Redirect to dashboard upon successful "login"
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+
+</body>
+</html>

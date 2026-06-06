@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management - VendorBridge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">
+        <h2>VendorBridge</h2>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">RFQ</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+</nav>
+
+<!-- Vendor Section -->
+<section class="vendor-section">
+
+    <h2>Vendor Management</h2>
+
+    <!-- Add Vendor -->
+    <div class="vendor-form-card">
+
+        <h3>Add New Vendor</h3>
+
+        <form id="vendorForm">
+
+            <div class="input-group">
+                <label>Vendor Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" id="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label>Company</label>
+                <input type="text" id="company" required>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Add Vendor
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Vendor List -->
+    <div class="vendor-list-card">
+
+        <h3>Registered Vendors</h3>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+
+            <tbody id="vendorTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<script>
+
+const form = document.getElementById("vendorForm");
+const table = document.getElementById("vendorTable");
+
+// Load existing vendors
+window.onload = () => {
+    const vendors = JSON.parse(localStorage.getItem("vendors")) || [];
+    vendors.forEach(addVendor);
+};
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const vendor = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        company: document.getElementById("company").value
+    };
+
+    addVendor(vendor);
+
+    let vendors = JSON.parse(localStorage.getItem("vendors")) || [];
+    vendors.push(vendor);
+    localStorage.setItem("vendors", JSON.stringify(vendors));
+
+    form.reset();
+});
+
+function addVendor(vendor) {
+    const row = `
+        <tr>
+            <td>${vendor.name}</td>
+            <td>${vendor.email}</td>
+            <td>${vendor.phone}</td>
+            <td>${vendor.company}</td>
+        </tr>
+    `;
+    table.innerHTML += row;
+}
+
+</script>
+
+</body>
+</html>
