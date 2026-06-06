@@ -112,6 +112,3 @@ RFQ Creation → Vendor Quotation → Comparison → Approval → Purchase Order
 ---
 
 ## 🚀 How to Run the Project
-
-### 1️⃣ Clone Repository
-```bash
